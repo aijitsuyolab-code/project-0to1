@@ -3,84 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>けが・後遺障害から探す公的支援ナビ｜骨折・切断・脊髄損傷・頭部外傷・やけど等</title>
-<meta name="description" content="けがの名前や今困っていることを入力すると、原因・年齢・介護状況に応じて確認候補となる公的支援と手続き順を整理。骨折、切断、脊髄損傷、頭部外傷、視力・聴力障害、やけど、手足の機能障害などに対応する無料ナビ。">
+<title>症状・診断名から探す公的支援ナビ｜けが・後遺障害・精神・こころ</title>
+<meta name="description" content="けが、後遺障害、精神・こころの不調、診断名や困りごとを入力すると、原因・年齢・就労状況等に応じて確認候補となる公的支援と手続き順を整理する無料ナビ。骨折、切断、脊髄損傷、うつ、双極性障害、統合失調症、PTSD、発達障害などに対応。">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://project-0to1.vercel.app/personal-condition-navigator.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="けが・後遺障害から探す公的支援ナビ">
-<meta property="og:description" content="けがの名前や今困っていることから、確認候補となる制度と手続き順を整理します。">
+<meta property="og:title" content="症状・診断名から探す公的支援ナビ｜身体・精神どちらも">
+<meta property="og:description" content="診断名や今困っていることから、確認候補となる制度と手続き順を整理します。">
 <meta property="og:url" content="https://project-0to1.vercel.app/personal-condition-navigator.html">
 <style>
 :root{--bg:#080a0d;--card:#12171d;--line:#2b313a;--gold:#d7b35a;--text:#f7f3e8;--muted:#abb4c0;--green:#69d59d;--red:#ff8b8b;--blue:#7abaff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#171b22,#080a0d 48%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}.w{max-width:1080px;margin:auto;padding:22px}.brand{color:var(--gold);font-weight:900;letter-spacing:.08em;font-size:13px}.hero{padding:38px 0 18px}.hero h1{font-size:clamp(32px,7vw,58px);line-height:1.08;margin:10px 0 14px}.hero p{max-width:850px;color:#d7dce3;font-size:18px}.gold{color:var(--gold)}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.c{grid-column:span 12;background:linear-gradient(180deg,#151b22,#101419);border:1px solid var(--line);border-radius:20px;padding:22px}.half{grid-column:span 6}.third{grid-column:span 4}.tag{display:inline-block;border:1px solid #3b434e;border-radius:999px;padding:5px 9px;margin:3px;font-size:12px;color:#d7dce3}.btn,button{display:inline-block;border:0;text-decoration:none;background:var(--gold);color:#17120b;font-weight:900;border-radius:12px;padding:13px 16px;margin:6px 6px 0 0;cursor:pointer;font-size:15px}.btn.secondary,button.secondary{background:#272e38;color:white;border:1px solid #3a424e}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}select,input{width:100%;background:#0c1015;color:white;border:1px solid #39414d;border-radius:11px;padding:12px;font-size:16px}.step{border-left:3px solid var(--gold);padding:5px 0 5px 14px;margin:13px 0}.official{border-left-color:var(--green)}.warning{border-left-color:var(--red)}.info{border-left-color:var(--blue)}.result{margin-top:18px}.hide{display:none}.result h3{margin-bottom:5px}.quick{display:flex;gap:8px;flex-wrap:wrap}.small{font-size:12px;color:var(--muted)}.pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#202833;border:1px solid #36404d;font-size:12px;margin:2px}.foot{font-size:12px;color:var(--muted);margin:22px 0}@media(max-width:760px){.half,.third{grid-column:span 12}.formgrid{grid-template-columns:1fr}.hero{padding-top:24px}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#171b22,#080a0d 48%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}.w{max-width:1080px;margin:auto;padding:22px}.brand{color:var(--gold);font-weight:900;letter-spacing:.08em;font-size:13px}.hero{padding:38px 0 18px}.hero h1{font-size:clamp(32px,7vw,58px);line-height:1.08;margin:10px 0 14px}.hero p{max-width:860px;color:#d7dce3;font-size:18px}.gold{color:var(--gold)}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.c{grid-column:span 12;background:linear-gradient(180deg,#151b22,#101419);border:1px solid var(--line);border-radius:20px;padding:22px}.half{grid-column:span 6}.third{grid-column:span 4}.tag{display:inline-block;border:1px solid #3b434e;border-radius:999px;padding:5px 9px;margin:3px;font-size:12px;color:#d7dce3}.btn,button{display:inline-block;border:0;text-decoration:none;background:var(--gold);color:#17120b;font-weight:900;border-radius:12px;padding:13px 16px;margin:6px 6px 0 0;cursor:pointer;font-size:15px}.btn.secondary,button.secondary{background:#272e38;color:white;border:1px solid #3a424e}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}select,input{width:100%;background:#0c1015;color:white;border:1px solid #39414d;border-radius:11px;padding:12px;font-size:16px}.step{border-left:3px solid var(--gold);padding:5px 0 5px 14px;margin:13px 0}.official{border-left-color:var(--green)}.warning{border-left-color:var(--red)}.info{border-left-color:var(--blue)}.result{margin-top:18px}.hide{display:none}.result h3{margin-bottom:5px}.quick{display:flex;gap:8px;flex-wrap:wrap}.small{font-size:12px;color:var(--muted)}.pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#202833;border:1px solid #36404d;font-size:12px;margin:2px}.foot{font-size:12px;color:var(--muted);margin:22px 0}@media(max-width:760px){.half,.third{grid-column:span 12}.formgrid{grid-template-columns:1fr}.hero{padding-top:24px}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"けが・後遺障害から探す公的支援ナビ","description":"けが・後遺障害・生活上の困りごとから確認候補となる公的支援と手続き順を整理する情報ページ","url":"https://project-0to1.vercel.app/personal-condition-navigator.html","isPartOf":{"@type":"WebSite","name":"AI実用研究所｜PROJECT 0→1","url":"https://project-0to1.vercel.app/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"症状・診断名から探す公的支援ナビ","description":"身体のけが・後遺障害・精神疾患・生活上の困りごとから確認候補となる公的支援と手続き順を整理する情報ページ","url":"https://project-0to1.vercel.app/personal-condition-navigator.html","isPartOf":{"@type":"WebSite","name":"AI実用研究所｜PROJECT 0→1","url":"https://project-0to1.vercel.app/"}}</script>
 </head>
 <body><main class="w">
 <div class="brand">AI実用研究所｜PROJECT 0→1</div>
 <section class="hero">
-<div><span class="tag">けがから探す</span><span class="tag">後遺障害</span><span class="tag">労災</span><span class="tag">障害年金</span><span class="tag">生活支援</span></div>
-<h1>けがの名前を入れる。<br><span class="gold">使えるかもしれない支援を横断する。</span></h1>
-<p>下半身不随は一例です。骨折、切断、脊髄損傷、頭部外傷、やけど、視力・聴力の障害、手足の機能障害など、けがや後遺症を入力して確認できます。さらに「歩けない」「手が使いにくい」「仕事ができない」など今困っていることも組み合わせて候補を絞ります。</p>
+<div><span class="tag">身体</span><span class="tag">精神・こころ</span><span class="tag">労災</span><span class="tag">障害年金</span><span class="tag">手帳</span><span class="tag">医療費</span><span class="tag">就労支援</span></div>
+<h1>病名や症状を入れる。<br><span class="gold">使えるかもしれない支援を横断する。</span></h1>
+<p>下半身不随は一例です。骨折・切断・脊髄損傷など身体のけがだけでなく、うつ、双極性障害、統合失調症、PTSD、パニック障害、発達障害など精神・こころの不調も同じ入口から確認できます。「仕事に行けない」「通院費が重い」「一人で生活しにくい」など困りごとも一緒に入力してください。</p>
 <a class="btn secondary" href="/personal-support.html">個人向け支援ナビへ戻る</a>
 </section>
 
 <section class="c">
 <h2>1分入力</h2>
-<label>けが・診断名・後遺症</label>
-<input id="condition" list="injuryExamples" placeholder="例：大腿骨骨折、指切断、脊髄損傷、頭部外傷、顔のやけど">
-<datalist id="injuryExamples">
-<option value="下半身不随"><option value="脊髄損傷"><option value="大腿骨骨折"><option value="骨盤骨折"><option value="脊椎骨折"><option value="腕の骨折"><option value="手指切断"><option value="足切断"><option value="頭部外傷"><option value="高次脳機能障害"><option value="失明"><option value="視力低下"><option value="聴力低下"><option value="顔面やけど"><option value="広範囲熱傷"><option value="膝の後遺症"><option value="肩が上がらない"><option value="手が動かない">
+<label>けが・病気・診断名・症状</label>
+<input id="condition" list="conditionExamples" placeholder="例：大腿骨骨折、脊髄損傷、うつ、PTSD、双極性障害">
+<datalist id="conditionExamples">
+<option value="下半身不随"><option value="脊髄損傷"><option value="大腿骨骨折"><option value="骨盤骨折"><option value="手指切断"><option value="頭部外傷"><option value="高次脳機能障害"><option value="失明"><option value="聴力低下"><option value="広範囲熱傷">
+<option value="うつ病"><option value="双極性障害"><option value="統合失調症"><option value="PTSD"><option value="パニック障害"><option value="不安障害"><option value="強迫性障害"><option value="適応障害"><option value="発達障害"><option value="ADHD"><option value="ASD"><option value="てんかん"><option value="知的障害">
 </datalist>
 <div class="quick">
 <button class="secondary" type="button" onclick="setCondition('大腿骨骨折')">骨折</button>
-<button class="secondary" type="button" onclick="setCondition('手指切断')">切断</button>
 <button class="secondary" type="button" onclick="setCondition('脊髄損傷')">脊髄損傷</button>
-<button class="secondary" type="button" onclick="setCondition('頭部外傷')">頭部外傷</button>
-<button class="secondary" type="button" onclick="setCondition('顔面やけど')">やけど</button>
-<button class="secondary" type="button" onclick="setCondition('視力低下')">視力</button>
-<button class="secondary" type="button" onclick="setCondition('聴力低下')">聴力</button>
+<button class="secondary" type="button" onclick="setCondition('うつ病')">うつ</button>
+<button class="secondary" type="button" onclick="setCondition('双極性障害')">双極性</button>
+<button class="secondary" type="button" onclick="setCondition('統合失調症')">統合失調症</button>
+<button class="secondary" type="button" onclick="setCondition('PTSD')">PTSD</button>
+<button class="secondary" type="button" onclick="setCondition('発達障害')">発達障害</button>
 </div>
 <label>今いちばん困っていること</label>
-<input id="problem" list="problemExamples" placeholder="例：歩けない、仕事に戻れない、介護が必要、車いすが必要">
-<datalist id="problemExamples"><option value="歩けない"><option value="長く立てない"><option value="手が使えない"><option value="物を持てない"><option value="見えにくい"><option value="聞こえにくい"><option value="仕事に戻れない"><option value="介護が必要"><option value="車いすが必要"><option value="家を改修したい"><option value="医療費が高い"></datalist>
+<input id="problem" list="problemExamples" placeholder="例：仕事に行けない、通院費が高い、一人で生活しにくい、眠れない">
+<datalist id="problemExamples"><option value="歩けない"><option value="手が使えない"><option value="仕事に戻れない"><option value="仕事に行けない"><option value="外出できない"><option value="人と会えない"><option value="一人で生活しにくい"><option value="服薬と通院が続いている"><option value="通院費が高い"><option value="眠れない"><option value="介護が必要"><option value="車いすが必要"><option value="家を改修したい"><option value="医療費が高い"></datalist>
 <div class="formgrid">
-<div><label>原因</label><select id="cause"><option value="work">仕事中の事故</option><option value="commute">通勤中の事故</option><option value="traffic">仕事外の交通事故・事故</option><option value="sports">スポーツ・日常生活のけが</option><option value="disease">病気が原因</option><option value="other">その他・不明</option></select></div>
+<div><label>主な原因・きっかけ</label><select id="cause"><option value="workstress">仕事のストレス・ハラスメント等</option><option value="work">仕事中の事故</option><option value="commute">通勤中の事故</option><option value="traffic">仕事外の交通事故・事故</option><option value="disease">病気・体質など</option><option value="other">その他・不明</option></select></div>
 <div><label>年齢</label><select id="age"><option value="20-39">20〜39歳</option><option value="40-64">40〜64歳</option><option value="65plus">65歳以上</option><option value="under20">20歳未満</option></select></div>
-<div><label>介護の必要度</label><select id="care"><option value="constant">常時かなり必要</option><option value="partial">一部必要</option><option value="little">ほぼ不要</option></select></div>
+<div><label>生活上の支援</label><select id="care"><option value="constant">常時かなり必要</option><option value="partial">一部必要</option><option value="little">ほぼ不要</option></select></div>
 <div><label>初診時の年金加入</label><select id="pension"><option value="employee">厚生年金</option><option value="national">国民年金</option><option value="unknown">分からない</option></select></div>
+<div><label>現在の働き方</label><select id="employment"><option value="employee">会社員・健康保険の被保険者</option><option value="self">自営業・国保など</option><option value="none">現在働いていない</option><option value="unknown">分からない</option></select></div>
+<div><label>通院状況</label><select id="treatment"><option value="ongoing">継続通院中</option><option value="hospitalized">入院中</option><option value="stopped">通院していない・中断</option><option value="unknown">分からない</option></select></div>
 </div>
 <button type="button" onclick="judge()">確認候補と手続き順を出す</button>
-<p class="small">※入力語だけで受給可否や障害等級を判定するものではありません。制度の「確認候補」を出すナビです。</p>
+<p class="small">※病名だけで受給可否や障害等級を判定するものではありません。制度の「確認候補」を出すナビです。</p>
 </section>
 <section id="result" class="c result hide"></section>
 
 <section class="grid" style="margin-top:14px">
-<div class="c third"><h3>手足・歩行</h3><p class="muted">骨折、切断、関節障害、麻痺、脊髄損傷など。</p><span class="pill">手帳</span><span class="pill">障害年金</span><span class="pill">補装具</span></div>
-<div class="c third"><h3>頭・脳・神経</h3><p class="muted">頭部外傷、脳損傷、高次脳機能障害など。</p><span class="pill">年金</span><span class="pill">福祉</span><span class="pill">就労</span></div>
-<div class="c third"><h3>目・耳</h3><p class="muted">失明、視力・視野障害、聴力障害など。</p><span class="pill">手帳</span><span class="pill">年金</span><span class="pill">補装具</span></div>
-<div class="c third"><h3>やけど・外見</h3><p class="muted">広範囲熱傷、瘢痕、顔面の外貌障害など。</p><span class="pill">医療</span><span class="pill">労災</span><span class="pill">後遺障害</span></div>
-<div class="c third"><h3>仕事中・通勤中</h3><p class="muted">けがの種類にかかわらず労災ルートを優先確認。</p><span class="pill">療養</span><span class="pill">休業</span><span class="pill">障害</span></div>
-<div class="c third"><h3>生活・介護</h3><p class="muted">車いす、住宅改修、介護、医療費、家族側の支援も横断。</p><span class="pill">補装具</span><span class="pill">介護</span><span class="pill">医療費</span></div>
+<div class="c third"><h3>手足・歩行</h3><p class="muted">骨折、切断、関節障害、麻痺、脊髄損傷など。</p><span class="pill">手帳</span><span class="pill">年金</span><span class="pill">補装具</span></div>
+<div class="c third"><h3>頭・脳・神経</h3><p class="muted">頭部外傷、高次脳機能障害、てんかんなど。</p><span class="pill">年金</span><span class="pill">福祉</span><span class="pill">就労</span></div>
+<div class="c third"><h3>精神・こころ</h3><p class="muted">うつ、双極性、統合失調症、PTSD、不安・パニック、発達障害など。</p><span class="pill">自立支援医療</span><span class="pill">精神手帳</span><span class="pill">年金</span></div>
+<div class="c third"><h3>目・耳</h3><p class="muted">視力・視野障害、聴力障害など。</p><span class="pill">手帳</span><span class="pill">年金</span><span class="pill">補装具</span></div>
+<div class="c third"><h3>仕事が原因</h3><p class="muted">事故だけでなく、強い心理的負荷による精神障害も労災の確認対象になり得ます。</p><span class="pill">労災</span><span class="pill">休業</span><span class="pill">障害</span></div>
+<div class="c third"><h3>働く・暮らす</h3><p class="muted">休職、復職、就労移行、A/B型、定着支援、生活支援も横断。</p><span class="pill">傷病手当</span><span class="pill">就労支援</span><span class="pill">福祉</span></div>
 </section>
 
 <section class="c" style="margin-top:14px">
-<h2>このナビで見る制度群</h2>
-<div class="step"><b>労災保険</b><br>仕事中・通勤中なら、療養・休業・障害・介護などを優先確認。</div>
-<div class="step"><b>障害年金</b><br>けがの名前ではなく、初診日・加入制度・保険料納付要件・障害状態等で確認。</div>
-<div class="step"><b>障害者手帳・障害福祉</b><br>身体機能、視覚、聴覚等の障害が一定基準に該当するかを自治体窓口で確認。</div>
-<div class="step"><b>補装具・日常生活用具</b><br>車いす、義肢、装具、補聴器など、障害の内容に応じた支援を確認。</div>
-<div class="step"><b>医療費・介護・住宅</b><br>高額療養費、介護保険、住宅改修、家族側の生活支援も必要に応じて横断。</div>
+<h2>精神・こころで確認する主な制度</h2>
+<div class="step"><b>自立支援医療（精神通院医療）</b><br>精神疾患があり、継続的な通院による精神医療が必要な場合に、通院医療費の自己負担を軽減する制度。自治体窓口で申請方法を確認。</div>
+<div class="step"><b>精神障害者保健福祉手帳</b><br>一定程度の精神障害の状態を認定する手帳で1〜3級。精神疾患の状態と能力障害の状態を総合的に判断し、市町村窓口を経由して申請。</div>
+<div class="step"><b>障害年金</b><br>精神の障害も障害認定基準の対象。初診日、加入制度、保険料納付要件、日常生活・労働への制限などを整理して確認。</div>
+<div class="step"><b>傷病手当金</b><br>会社員等で業務外の病気・けがにより仕事ができず、一定の要件を満たす場合の所得保障。仕事が原因なら労災との切り分けを優先。</div>
+<div class="step"><b>就労系障害福祉サービス</b><br>就労移行支援、就労継続支援A型・B型、就労定着支援などを、働く力や希望に応じて確認。</div>
+<div class="step"><b>精神障害の労災</b><br>仕事による強い心理的負荷など所定の認定要件を満たす精神障害は労災対象となる場合があります。ハラスメントや長時間労働等が関係する場合は労働基準監督署へ確認。</div>
 </section>
 
 <section class="grid" style="margin-top:14px">
-<div class="c half"><h3>公式：障害年金</h3><a class="btn secondary" href="https://www.nenkin.go.jp/service/jukyu/seido/shougainenkin/jukyu-yoken/20150401-01.html" target="_blank" rel="noopener">日本年金機構</a></div>
-<div class="c half"><h3>公式：労災の様式・手続き</h3><a class="btn secondary" href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/rousaihoken.html" target="_blank" rel="noopener">厚生労働省</a></div>
-<div class="c half"><h3>公式：身体障害者手帳</h3><a class="btn secondary" href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/techou.html" target="_blank" rel="noopener">厚生労働省</a></div>
-<div class="c half"><h3>公式：高額療養費</h3><a class="btn secondary" href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html" target="_blank" rel="noopener">厚生労働省</a></div>
+<div class="c third"><h3>公式：障害年金の認定基準</h3><a class="btn secondary" href="https://www.nenkin.go.jp/service/jukyu/seido/shougainenkin/ninteikijun/20140604.html" target="_blank" rel="noopener">日本年金機構</a></div>
+<div class="c third"><h3>公式：精神障害者保健福祉手帳</h3><a class="btn secondary" href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/techou.html" target="_blank" rel="noopener">厚生労働省</a></div>
+<div class="c third"><h3>公式：自立支援医療</h3><a class="btn secondary" href="https://www.mhlw.go.jp/bunya/shougaihoken/jiritsu/seishin.html" target="_blank" rel="noopener">厚生労働省</a></div>
+<div class="c third"><h3>公式：精神障害の労災</h3><a class="btn secondary" href="https://www.mhlw.go.jp/bunya/roudoukijun/rousaihoken04/090316.html" target="_blank" rel="noopener">厚生労働省</a></div>
+<div class="c third"><h3>公式：傷病手当金</h3><a class="btn secondary" href="https://www.kyoukaikenpo.or.jp/g6/cat620/r307" target="_blank" rel="noopener">全国健康保険協会</a></div>
+<div class="c third"><h3>公式：就労支援</h3><a class="btn secondary" href="https://www.mhlw.go.jp/stf/newpage_40524.html" target="_blank" rel="noopener">厚生労働省</a></div>
 </section>
-<p class="foot">最終更新：2026-08-20。表示は一般的な確認候補で、診断・受給資格・障害等級・支給額を確定するものではありません。けがの程度、治療経過、症状固定、初診日、原因、年齢、加入制度、自治体等で扱いが変わるため、申請前に公的窓口・公式情報で最終確認してください。</p>
+<p class="foot">最終更新：2026-08-20。表示は一般的な確認候補で、診断・受給資格・障害等級・支給額を確定するものではありません。身体・精神とも、症状の程度、治療経過、初診日、原因、年齢、加入制度、就労状況、自治体等で扱いが変わるため、申請前に公的窓口・公式情報で最終確認してください。</p>
 </main>
 <script>
 function setCondition(v){document.getElementById('condition').value=v}
@@ -91,54 +97,45 @@ function judge(){
  const c=document.getElementById('condition').value.trim();
  const p=document.getElementById('problem').value.trim();
  const text=(c+' '+p).toLowerCase();
- const cause=document.getElementById('cause').value, age=document.getElementById('age').value, care=document.getElementById('care').value, pension=document.getElementById('pension').value;
+ const cause=document.getElementById('cause').value,age=document.getElementById('age').value,care=document.getElementById('care').value,pension=document.getElementById('pension').value,employment=document.getElementById('employment').value,treatment=document.getElementById('treatment').value;
  let cards=[];
- if(cause==='work'||cause==='commute') add(cards,'労災保険','仕事中・通勤中なら最優先。治療中は療養・休業、症状固定後に障害が残れば障害給付、一定の重度障害で介護を受けている場合は介護給付等を労働基準監督署で確認。',1);
+ const mental=has(text,/うつ|鬱|双極|躁うつ|統合失調|ptsd|心的外傷|パニック|不安障害|強迫|適応障害|発達障害|adhd|asd|自閉|精神|幻聴|幻覚|妄想|摂食障害|てんかん|眠れ|不眠/);
+ const intellectual=has(text,/知的障害|知的発達/);
+ if((cause==='work'||cause==='commute')&&!mental) add(cards,'労災保険','仕事中・通勤中のけがなら最優先候補。療養・休業、症状固定後の障害給付等を労働基準監督署で確認。',1);
+ if(mental){
+  if(treatment==='ongoing'||treatment==='hospitalized'||treatment==='unknown') add(cards,'自立支援医療（精神通院医療）','精神疾患で継続的な通院による精神医療が必要な場合、通院医療費の自己負担軽減制度を自治体で確認。入院医療そのものは精神通院医療の対象外なので退院後の通院も含め窓口確認。',2);
+  add(cards,'精神障害者保健福祉手帳','一定程度の精神障害の状態にある場合の手帳。1〜3級があり、精神疾患の状態と能力障害の状態を総合的に判断。市町村窓口で必要書類を確認。',3);
+  add(cards,'障害年金（精神の障害）','精神の障害も障害年金の認定対象。初診日、加入制度、保険料納付要件に加え、食事・清潔・金銭管理・対人関係・通院服薬・労働など日常生活上の制限を具体的に整理して確認。',3);
+  add(cards,'障害福祉・就労支援','就労移行支援、就労継続支援A型・B型、就労定着支援など、働く力や希望に応じた支援を自治体・相談支援窓口で確認。',4);
+  if(cause==='workstress') add(cards,'精神障害の労災','発病前おおむね6か月の業務による強い心理的負荷など、労災の認定要件に該当するかを労働基準監督署で確認。ハラスメント、長時間労働、事故・災害の体験等は経緯と証拠を整理。',1);
+  if(employment==='employee'&&cause!=='workstress') add(cards,'傷病手当金','会社員等の健康保険被保険者で、業務外の病気により療養のため働けず、連続3日の待期後も休み、給与が支払われない等の要件を満たす場合に確認。',2);
+ }
+ if(intellectual) add(cards,'療育手帳','知的障害があると判定された方を対象とする療育手帳を自治体で確認。判定基準や運用は自治体ごとに異なります。',3);
  if(has(text,/骨折|脱臼|靭帯|半月板|関節|膝|股関節|肩|肘|手首|足首|麻痺|まひ|脊髄|脊椎|歩け|立て|下半身不随|対麻痺|四肢|切断|欠損|指が動|手が動/)){
   add(cards,'身体障害者手帳','手足・体幹の機能障害が一定基準に該当するか、市区町村の障害福祉窓口で確認。けがの名前だけではなく残った機能障害で判断されます。',3);
   add(cards,'障害年金','治療後も日常生活や労働に大きな制限が残る場合は候補。初診日、加入制度、保険料納付要件、障害状態等を年金事務所等で確認。',4);
  }
  if(has(text,/切断|欠損|義足|義手|歩け|車いす|装具|脊髄|麻痺|まひ/)) add(cards,'補装具費支給制度','義肢・装具・車いす等が必要な場合、市区町村の障害福祉窓口で購入前に対象・申請順を確認。',3);
- if(has(text,/失明|視力|視野|見え|眼|目が/)){
-  add(cards,'視覚障害の手帳・福祉','視力・視野の障害が残る場合、身体障害者手帳や視覚障害向け支援の対象を自治体で確認。',3);
-  add(cards,'障害年金','視力・視野の状態が障害年金の基準に関係する場合があるため、年金事務所等で確認。',4);
- }
- if(has(text,/聴力|難聴|聞こえ|耳が|鼓膜/)){
-  add(cards,'聴覚障害の手帳・補装具','聴力障害が残る場合、身体障害者手帳や補聴器等の補装具支援を自治体で確認。',3);
-  add(cards,'障害年金','聴力の状態が障害年金の基準に関係する場合があるため確認。',4);
- }
- if(has(text,/頭部|脳挫傷|脳損傷|高次脳|記憶|認知|意識|てんかん/)){
-  add(cards,'障害年金','脳・神経系の後遺症で日常生活や労働に大きな制限が残る場合は候補。診断名だけでなく具体的な生活能力を整理。',3);
-  add(cards,'障害福祉・就労支援','認知・行動・高次脳機能などの後遺症がある場合、自治体の障害福祉や就労支援も横断確認。',4);
- }
- if(has(text,/やけど|熱傷|瘢痕|傷跡|顔面|外貌/)){
-  add(cards,'医療費・形成外科等の継続治療','治療費が高額になる場合は加入する健康保険で高額療養費を確認。労災なら労災ルートを優先。',3);
-  if(cause==='work'||cause==='commute') add(cards,'労災の障害給付','症状固定後に機能障害や一定の外貌障害等が残る場合、障害給付の対象可否を労働基準監督署で確認。',2);
- }
- if(has(text,/仕事.*でき|復職|働け|休業|収入|仕事に戻れ/)){
+ if(has(text,/失明|視力|視野|見え|眼|目が/)){add(cards,'視覚障害の手帳・福祉','視力・視野の障害が残る場合、身体障害者手帳や視覚障害向け支援の対象を自治体で確認。',3);add(cards,'障害年金','視力・視野の状態が障害年金の基準に関係する場合があるため年金事務所等で確認。',4)}
+ if(has(text,/聴力|難聴|聞こえ|耳が|鼓膜/)){add(cards,'聴覚障害の手帳・補装具','聴力障害が残る場合、身体障害者手帳や補聴器等の補装具支援を自治体で確認。',3);add(cards,'障害年金','聴力の状態が障害年金の基準に関係する場合があるため確認。',4)}
+ if(has(text,/頭部|脳挫傷|脳損傷|高次脳|記憶|認知|意識/)){add(cards,'障害年金','脳・神経系の後遺症で日常生活や労働に大きな制限が残る場合は候補。具体的な生活能力を整理。',3);add(cards,'障害福祉・就労支援','認知・行動・高次脳機能などの後遺症がある場合、自治体の障害福祉や就労支援も横断確認。',4)}
+ if(has(text,/仕事.*でき|仕事に行け|復職|働け|休業|収入|仕事に戻れ/)){
   if(cause==='work'||cause==='commute') add(cards,'労災の休業給付','療養のため働けず賃金を受けられない場合、休業給付の請求手続きを確認。',2);
-  else add(cards,'傷病手当金など就労不能時の所得保障','会社員等で業務外のけがにより働けない場合、加入健康保険の傷病手当金等を確認。',3);
+  else if(employment==='employee'&&!mental) add(cards,'傷病手当金','会社員等で業務外の病気・けがにより働けない場合、加入健康保険の傷病手当金を確認。',3);
  }
- if(has(text,/医療費|治療費|入院|手術|高い/)) add(cards,'高額療養費','保険診療の自己負担が高額になる場合、年齢・所得に応じた自己負担上限と申請方法を加入保険で確認。',3);
- if(has(text,/介護|常時|寝たきり|一人でできない|排泄|入浴/)||care==='constant'){
-  add(cards,'介護・障害福祉サービス','介助量が大きい場合、年齢や原因疾病に応じて介護保険または障害福祉サービスを自治体で確認。',3);
-  if(age!=='under20') add(cards,'重度障害者向け手当等','在宅で常時特別の介護が必要な重度障害などに該当する場合、特別障害者手当等の対象可否を自治体で確認。',4);
- }
+ if(has(text,/医療費|治療費|入院|手術|高い|通院費/)&&!mental) add(cards,'高額療養費','保険診療の自己負担が高額になる場合、年齢・所得に応じた自己負担上限と申請方法を加入保険で確認。',3);
+ if(has(text,/介護|常時|寝たきり|一人でできない|生活しにくい|排泄|入浴/)||care==='constant') add(cards,'介護・障害福祉サービス','介助・見守り・生活支援が大きい場合、年齢や障害の内容に応じて介護保険または障害福祉サービスを自治体で確認。',3);
  if(has(text,/家.*改修|段差|手すり|住宅|風呂|トイレ/)) add(cards,'住宅改修・日常生活用具','手すり、段差解消、移動・入浴・排泄環境の改修等について、工事前に自治体へ対象制度と事前申請の要否を確認。',3);
  if(age==='65plus') add(cards,'介護保険','65歳以上は要介護認定、福祉用具、住宅改修、介護サービス等を市区町村・地域包括支援センター等で確認。',4);
- if(age==='40-64'&&cause==='disease') add(cards,'介護保険の特定疾病確認','40〜64歳は原因となった疾病が介護保険の特定疾病に該当するかを自治体等で確認。',5);
  if(pension==='employee') add(cards,'障害厚生年金の確認','初診時に厚生年金加入中だった場合、障害厚生年金の請求可否を年金事務所等で確認。',5);
  if(pension==='national') add(cards,'障害基礎年金の確認','初診時の加入状況等に応じて障害基礎年金の請求可否を年金事務所・自治体等で確認。',5);
- if(cards.length===0){
-  add(cards,'まず医療・所得・障害の3系統を確認','入力語から専用分類できない場合でも、医療費、働けない期間の所得保障、後遺障害が残った場合の年金・福祉を横断確認。',3);
-  add(cards,'自治体の障害福祉窓口','診断名と「何ができなくなったか」を伝えて、手帳・福祉サービス・補装具・日常生活用具の対象を確認。',4);
- }
+ if(cards.length===0){add(cards,'まず医療・所得・障害の3系統を確認','入力語から専用分類できない場合でも、医療費、働けない期間の所得保障、障害が残った場合の年金・福祉を横断確認。',3);add(cards,'自治体・公的窓口で横断相談','診断名だけでなく「何ができなくなったか」「仕事や生活で何に困るか」を伝えて対象制度を確認。',4)}
  cards.sort((a,b)=>a[2]-b[2]);
- let html='<h2>「'+esc(c||'入力したけが')+'」で確認する候補</h2>';
+ let html='<h2>「'+esc(c||'入力した症状・病気')+'」で確認する候補</h2>';
  if(p) html+='<p class="muted">困りごと：'+esc(p)+'</p>';
  html+='<p class="muted">受給確定ではなく、確認漏れを減らすための候補です。</p>';
  cards.forEach((x,i)=>html+='<div class="step"><h3>'+(i+1)+'. '+x[0]+'</h3><div>'+x[1]+'</div></div>');
- html+='<div class="step official"><b>最初に1枚へ整理：</b> 事故日・初診日・診断名・治療経過・入院/手術・勤務状況・できなくなった動作・介護量・年金加入・世帯状況。これを持って各公的窓口へ。</div>';
+ html+='<div class="step official"><b>最初に1枚へ整理：</b> 初診日・診断名・治療歴・通院先・服薬・仕事を休み始めた日・勤務状況・日常生活でできなくなったこと・援助が必要な場面・年金加入・世帯状況。仕事が原因なら出来事の日付、勤務記録、メール等の証拠も整理。</div>';
  const r=document.getElementById('result');r.innerHTML=html;r.classList.remove('hide');r.scrollIntoView({behavior:'smooth',block:'start'});
 }
 </script>
