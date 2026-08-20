@@ -1,0 +1,7 @@
+{
+  "name": "project-0to1",
+  "private": true,
+  "dependencies": {
+    "@vercel/functions": "latest"
+  }
+}
