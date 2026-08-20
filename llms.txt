@@ -10,6 +10,7 @@
 - Condition-based support navigator: https://project-0to1.vercel.app/personal-condition-navigator.html
 - Mental health support: https://project-0to1.vercel.app/mental-support.html
 - Cancer leave and treatment support: https://project-0to1.vercel.app/gan-kyushoku-support.html
+- Stroke hospitalization and recovery support: https://project-0to1.vercel.app/noukousoku-support.html
 
 ## Main services
 - 無料会社健康診断: AI認知、検索、信頼、集客、デジタル対応などを簡易スコア化し、弱点を整理します。
