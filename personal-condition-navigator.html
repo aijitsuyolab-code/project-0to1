@@ -13,20 +13,20 @@
 <meta property="og:url" content="https://project-0to1.vercel.app/personal-condition-navigator.html">
 <style>
 :root{--bg:#080a0d;--card:#12171d;--line:#2b313a;--gold:#d7b35a;--text:#f7f3e8;--muted:#abb4c0;--green:#69d59d;--red:#ff8b8b;--blue:#7abaff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#171b22,#080a0d 48%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}.w{max-width:1080px;margin:auto;padding:22px}.brand{color:var(--gold);font-weight:900;letter-spacing:.08em;font-size:13px}.hero{padding:38px 0 18px}.hero h1{font-size:clamp(32px,7vw,58px);line-height:1.08;margin:10px 0 14px}.hero p{max-width:860px;color:#d7dce3;font-size:18px}.gold{color:var(--gold)}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.c{grid-column:span 12;background:linear-gradient(180deg,#151b22,#101419);border:1px solid var(--line);border-radius:20px;padding:22px}.half{grid-column:span 6}.third{grid-column:span 4}.tag{display:inline-block;border:1px solid #3b434e;border-radius:999px;padding:5px 9px;margin:3px;font-size:12px;color:#d7dce3}.btn,button{display:inline-block;border:0;text-decoration:none;background:var(--gold);color:#17120b;font-weight:900;border-radius:12px;padding:13px 16px;margin:6px 6px 0 0;cursor:pointer;font-size:15px}.btn.secondary,button.secondary{background:#272e38;color:white;border:1px solid #3a424e}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}select,input{width:100%;background:#0c1015;color:white;border:1px solid #39414d;border-radius:11px;padding:12px;font-size:16px}.step{border-left:3px solid var(--gold);padding:5px 0 5px 14px;margin:13px 0}.official{border-left-color:var(--green)}.warning{border-left-color:var(--red)}.info{border-left-color:var(--blue)}.result{margin-top:18px}.hide{display:none}.result h3{margin-bottom:5px}.quick{display:flex;gap:8px;flex-wrap:wrap}.small{font-size:12px;color:var(--muted)}.pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#202833;border:1px solid #36404d;font-size:12px;margin:2px}.foot{font-size:12px;color:var(--muted);margin:22px 0}@media(max-width:760px){.half,.third{grid-column:span 12}.formgrid{grid-template-columns:1fr}.hero{padding-top:24px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#171b22,#080a0d 48%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}.w{max-width:1080px;margin:auto;padding:22px}.brand{color:var(--gold);font-weight:900;letter-spacing:.08em;font-size:13px}.hero{padding:38px 0 18px}.hero h1{font-size:clamp(32px,7vw,58px);line-height:1.08;margin:10px 0 14px}.hero p{max-width:860px;color:#d7dce3;font-size:18px}.gold{color:var(--gold)}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.c{grid-column:span 12;background:linear-gradient(180deg,#151b22,#101419);border:1px solid var(--line);border-radius:20px;padding:22px}.half{grid-column:span 6}.third{grid-column:span 4}.tag{display:inline-block;border:1px solid #3b434e;border-radius:999px;padding:5px 9px;margin:3px;font-size:12px;color:#d7dce3;text-decoration:none;cursor:pointer;transition:.15s ease}.tag:hover,.tag:focus{border-color:var(--gold);color:#fff;background:#1c222a;outline:none}.btn,button{display:inline-block;border:0;text-decoration:none;background:var(--gold);color:#17120b;font-weight:900;border-radius:12px;padding:13px 16px;margin:6px 6px 0 0;cursor:pointer;font-size:15px}.btn.secondary,button.secondary{background:#272e38;color:white;border:1px solid #3a424e}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}select,input{width:100%;background:#0c1015;color:white;border:1px solid #39414d;border-radius:11px;padding:12px;font-size:16px}.step{border-left:3px solid var(--gold);padding:5px 0 5px 14px;margin:13px 0}.official{border-left-color:var(--green)}.warning{border-left-color:var(--red)}.info{border-left-color:var(--blue)}.result{margin-top:18px}.hide{display:none}.result h3{margin-bottom:5px}.quick{display:flex;gap:8px;flex-wrap:wrap}.small{font-size:12px;color:var(--muted)}.pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#202833;border:1px solid #36404d;font-size:12px;margin:2px}.foot{font-size:12px;color:var(--muted);margin:22px 0}@media(max-width:760px){.half,.third{grid-column:span 12}.formgrid{grid-template-columns:1fr}.hero{padding-top:24px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"症状・診断名から探す公的支援ナビ","description":"身体のけが・後遺障害・精神疾患・生活上の困りごとから確認候補となる公的支援と手続き順を整理する情報ページ","url":"https://project-0to1.vercel.app/personal-condition-navigator.html","isPartOf":{"@type":"WebSite","name":"AI実用研究所｜PROJECT 0→1","url":"https://project-0to1.vercel.app/"}}</script>
 </head>
 <body><main class="w">
 <div class="brand">AI実用研究所｜PROJECT 0→1</div>
 <section class="hero">
-<div><span class="tag">身体</span><span class="tag">精神・こころ</span><span class="tag">労災</span><span class="tag">障害年金</span><span class="tag">手帳</span><span class="tag">医療費</span><span class="tag">就労支援</span></div>
+<div><a class="tag" href="#input" onclick="presetCondition('大腿骨骨折');return false">身体</a><a class="tag" href="#input" onclick="presetCondition('うつ病');return false">精神・こころ</a><a class="tag" href="#input" onclick="presetCause('work');return false">労災</a><a class="tag" href="#input" onclick="focusField('pension');return false">障害年金</a><a class="tag" href="#input" onclick="presetProblem('障害者手帳を確認したい');return false">手帳</a><a class="tag" href="#input" onclick="presetProblem('医療費が高い');return false">医療費</a><a class="tag" href="#input" onclick="presetProblem('仕事に戻れない');return false">就労支援</a></div>
 <h1>病名や症状を入れる。<br><span class="gold">使えるかもしれない支援を横断する。</span></h1>
 <p>下半身不随は一例です。骨折・切断・脊髄損傷など身体のけがだけでなく、うつ、双極性障害、統合失調症、PTSD、パニック障害、発達障害など精神・こころの不調も同じ入口から確認できます。「仕事に行けない」「通院費が重い」「一人で生活しにくい」など困りごとも一緒に入力してください。</p>
 <a class="btn secondary" href="/personal-support.html">個人向け支援ナビへ戻る</a>
 </section>
 
-<section class="c">
+<section class="c" id="input">
 <h2>1分入力</h2>
 <label>けが・病気・診断名・症状</label>
 <input id="condition" list="conditionExamples" placeholder="例：大腿骨骨折、脊髄損傷、うつ、PTSD、双極性障害">
@@ -89,7 +89,13 @@
 <p class="foot">最終更新：2026-08-20。表示は一般的な確認候補で、診断・受給資格・障害等級・支給額を確定するものではありません。身体・精神とも、症状の程度、治療経過、初診日、原因、年齢、加入制度、就労状況、自治体等で扱いが変わるため、申請前に公的窓口・公式情報で最終確認してください。</p>
 </main>
 <script>
+function scrollInput(){document.getElementById('input').scrollIntoView({behavior:'smooth',block:'start'})}
 function setCondition(v){document.getElementById('condition').value=v}
+function presetCondition(v){setCondition(v);scrollInput();setTimeout(()=>document.getElementById('condition').focus(),250)}
+function presetProblem(v){document.getElementById('problem').value=v;scrollInput();setTimeout(()=>document.getElementById('problem').focus(),250)}
+function presetCause(v){document.getElementById('cause').value=v;scrollInput();setTimeout(()=>document.getElementById('cause').focus(),250)}
+function focusField(id){scrollInput();setTimeout(()=>document.getElementById(id).focus(),250)}
+function applyQueryPreset(){const p=new URLSearchParams(location.search);const q=p.get('q'),problem=p.get('problem'),cause=p.get('cause');if(q)document.getElementById('condition').value=q;if(problem)document.getElementById('problem').value=problem;if(cause&&document.querySelector('#cause option[value="'+CSS.escape(cause)+'"]'))document.getElementById('cause').value=cause;if(q||problem||cause)setTimeout(scrollInput,120)}
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function has(t,re){return re.test(t)}
 function add(arr,title,text,priority){if(!arr.some(x=>x[0]===title))arr.push([title,text,priority||5])}
@@ -138,5 +144,6 @@ function judge(){
  html+='<div class="step official"><b>最初に1枚へ整理：</b> 初診日・診断名・治療歴・通院先・服薬・仕事を休み始めた日・勤務状況・日常生活でできなくなったこと・援助が必要な場面・年金加入・世帯状況。仕事が原因なら出来事の日付、勤務記録、メール等の証拠も整理。</div>';
  const r=document.getElementById('result');r.innerHTML=html;r.classList.remove('hide');r.scrollIntoView({behavior:'smooth',block:'start'});
 }
+document.addEventListener('DOMContentLoaded',applyQueryPreset);
 </script>
 </body></html>
