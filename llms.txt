@@ -1,16 +1,21 @@
 # AI実用研究所 | PROJECT 0→1
 
-> 日本の中小企業・個人事業者向けに、会社健康診断、SEO/GEO、AI導入、海外進出、補助金・助成金情報整理、AI買い物支援などを扱う実務支援サイトです。
+> 日本の中小企業・個人事業者向けに、会社健康診断、SEO/GEO、AI導入、海外進出、補助金・助成金情報整理、AI買い物支援に加え、個人向けの公的支援情報も扱う実務支援サイトです。
 
 ## Main URLs
 - Home: https://project-0to1.vercel.app/
 - AI shopping concierge: https://project-0to1.vercel.app/shopping.html
 - SEO/GEO diagnosis: https://project-0to1.vercel.app/seo-geo.html
+- Personal support navigator: https://project-0to1.vercel.app/personal-support.html
+- Condition-based support navigator: https://project-0to1.vercel.app/personal-condition-navigator.html
+- Mental health support: https://project-0to1.vercel.app/mental-support.html
+- Cancer leave and treatment support: https://project-0to1.vercel.app/gan-kyushoku-support.html
 
 ## Main services
 - 無料会社健康診断: AI認知、検索、信頼、集客、デジタル対応などを簡易スコア化し、弱点を整理します。
 - AI買い物コンシェルジュ: 欲しいもの、予算、用途、こだわりを文章で入力し、買い物条件と購入先を整理します。提携可能なショップへの送客型で、商品代の立替えや在庫保有は行いません。
 - SEO/GEO診断: Google等の検索エンジンと生成AI・AI検索の双方に理解されやすいサイト設計を確認します。
+- 個人向け公的支援ナビ: 病気、けが、精神的不調、休職、医療費、介護などから確認候補となる制度と手続き順を整理します。
 - AI・業務自動化: 定型業務、AI社員、AI電話、権限・ログ・ガバナンス等の導入余地を整理します。
 - GLOBAL 0→1: 海外販売、越境EC、海外進出時に確認すべき項目を整理します。
 - 規制・証跡整理: EU AI Act等を含む規制対応について、確認事項と証跡整理の入口を提供します。
@@ -23,4 +28,4 @@
 - 検索流入だけでなく、診断・問い合わせ・購入等の成約導線まで一体で改善します。
 
 ## Important note
-本サイトの診断・AI案内は簡易的な情報整理であり、法的・税務・投資・認証等の専門判断や、検索順位・AI回答への掲載・売上等を保証するものではありません。
+本サイトの診断・AI案内は簡易的な情報整理であり、法的・税務・投資・認証・医療等の専門判断や、検索順位・AI回答への掲載・売上等を保証するものではありません。
