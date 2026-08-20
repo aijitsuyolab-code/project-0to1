@@ -39,4 +39,8 @@
 <article class="c"><h2>家族全体の支援を横断したい</h2><p class="muted">年金、子育て、住まい、失業、介護、生活費などを一制度ずつではなく横断して確認する入口。</p><a class="btn" href="/personal-support.html">個人向け支援ナビへ</a></article>
 </section>
 <p class="foot">※本ページは情報整理の入口です。制度は改正や自治体差があるため、申請前に各公的機関の最新情報をご確認ください。</p>
-</main></body></html>
+</main>
+<script>
+(()=>{try{let sid=localStorage.getItem('p01_sid');if(!sid){sid=(crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36));localStorage.setItem('p01_sid',sid)}const send=target=>fetch('/api/visit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({site:location.hostname,path:'/__event/support-case-click?to='+encodeURIComponent(target),session_id:sid,referrer_host:location.hostname}),keepalive:true}).catch(()=>{});document.addEventListener('click',e=>{const a=e.target.closest('a.btn[href]');if(!a)return;send(a.getAttribute('href')||'unknown')})}catch{}})();
+</script>
+</body></html>
