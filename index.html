@@ -116,4 +116,5 @@ function judgeGlobal(){const f=fromCountry.value,t=toCountry.value,w=whatSell.va
 function renderDeadlines(){const items=[['PPWR 包装規則','2026-08-12','EU包装・技術文書'],['フランス e-Invoice','2026-09-01','電子請求書受信準備'],['CRA 報告義務','2026-09-11','24h/72h報告体制'],['EU Data Act','2026-09-12','接続製品データアクセス']];const now=new Date();deadlines.innerHTML=items.map(x=>{const d=new Date(x[1]+'T00:00:00');const days=Math.ceil((d-now)/86400000);let txt=days>0?`あと${days}日`:'施行済み';let cls=days<=7&&days>0?'hot':days<=0?'live':'';return `<div class="deadline"><div><b>${x[0]}</b><br><span class="muted">${x[2]}</span></div><span class="pill ${cls}">${txt}</span></div>`}).join('')}
 renderDeadlines();
 </script>
+<script src="/analytics.js" defer></script>
 <p class="foot"><a href="https://sovrn.co/b9mb2o7" rel="sponsored noopener" target="_blank">商品リンク（テスト）</a></p></body></html>
