@@ -4,6 +4,7 @@
 
 ## Main URLs
 - Home: https://project-0to1.vercel.app/
+- Business growth support: https://project-0to1.vercel.app/business-growth-support.html
 - AI shopping concierge: https://project-0to1.vercel.app/shopping.html
 - SEO/GEO diagnosis: https://project-0to1.vercel.app/seo-geo.html
 - Public support quick guide: https://project-0to1.vercel.app/public-support-guide.html
@@ -22,6 +23,7 @@
 
 ## Main services
 - 無料会社健康診断: AI認知、検索、信頼、集客、デジタル対応などを簡易スコア化し、弱点を整理します。
+- 事業改善支援: 無料診断後にSEO/GEO、AI・業務自動化、GLOBAL 0→1、収益導線のうち必要な改善だけを切り分けます。
 - AI買い物コンシェルジュ: 欲しいもの、予算、用途、こだわりを文章で入力し、買い物条件と購入先を整理します。提携可能なショップへの送客型で、商品代の立替えや在庫保有は行いません。
 - SEO/GEO診断: Google等の検索エンジンと生成AI・AI検索の双方に理解されやすいサイト設計を確認します。
 - 公的支援・給付の状況別早見ガイド: 休職、失業、介護離職、労災、がん、脳梗塞、難病、人工透析などから該当する支援情報ページへ案内します。
