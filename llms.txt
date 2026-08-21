@@ -4,6 +4,7 @@
 
 ## Main URLs
 - Home: https://project-0to1.vercel.app/
+- Free company health diagnosis: https://project-0to1.vercel.app/index2.html
 - Business growth support: https://project-0to1.vercel.app/business-growth-support.html
 - AI shopping concierge: https://project-0to1.vercel.app/shopping.html
 - SEO/GEO diagnosis: https://project-0to1.vercel.app/seo-geo.html
