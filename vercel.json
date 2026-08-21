@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/personal.html",
+      "destination": "/personal-support.html",
+      "permanent": true
+    },
+    {
+      "source": "/index2.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
