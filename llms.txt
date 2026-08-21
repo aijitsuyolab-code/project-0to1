@@ -6,6 +6,7 @@
 - Home: https://project-0to1.vercel.app/
 - AI shopping concierge: https://project-0to1.vercel.app/shopping.html
 - SEO/GEO diagnosis: https://project-0to1.vercel.app/seo-geo.html
+- Public support quick guide: https://project-0to1.vercel.app/public-support-guide.html
 - Personal support navigator: https://project-0to1.vercel.app/personal-support.html
 - Personal support case hub: https://project-0to1.vercel.app/personal-support-cases.html
 - Condition-based support navigator: https://project-0to1.vercel.app/personal-condition-navigator.html
@@ -23,6 +24,7 @@
 - 無料会社健康診断: AI認知、検索、信頼、集客、デジタル対応などを簡易スコア化し、弱点を整理します。
 - AI買い物コンシェルジュ: 欲しいもの、予算、用途、こだわりを文章で入力し、買い物条件と購入先を整理します。提携可能なショップへの送客型で、商品代の立替えや在庫保有は行いません。
 - SEO/GEO診断: Google等の検索エンジンと生成AI・AI検索の双方に理解されやすいサイト設計を確認します。
+- 公的支援・給付の状況別早見ガイド: 休職、失業、介護離職、労災、がん、脳梗塞、難病、人工透析などから該当する支援情報ページへ案内します。
 - 個人向け公的支援ナビ: 病気、けが、精神的不調、休職、失業、介護離職、医療費、介護、労災、人工透析などから確認候補となる制度と手続き順を整理します。
 - AI・業務自動化: 定型業務、AI社員、AI電話、権限・ログ・ガバナンス等の導入余地を整理します。
 - GLOBAL 0→1: 海外販売、越境EC、海外進出時に確認すべき項目を整理します。
