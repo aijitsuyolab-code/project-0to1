@@ -65,10 +65,12 @@ export async function onRequest(context) {
     if (request.method === 'GET') {
       const summary = await sb('site_analytics_summary?select=*&order=visitors_24h.desc');
       const top = await sb('site_analytics_top_pages?select=*&order=pageviews.desc&limit=50');
+      const conversions = await sb('site_analytics_conversion_events?select=*&order=events.desc&limit=50');
       return json({
         ok: true,
         summary,
         top,
+        conversions,
         privacy: 'No IP address, name, email or exact device fingerprint is stored.',
       });
     }
