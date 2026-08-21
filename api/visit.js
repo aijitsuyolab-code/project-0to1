@@ -34,7 +34,8 @@ export default async function handler(req,res){
     }
     const summary = await sb('site_analytics_summary?select=*&order=visitors_24h.desc');
     const top = await sb('site_analytics_top_pages?select=*&order=pageviews.desc&limit=50');
-    return res.status(200).json({ok:true,summary,top,privacy:'No IP address, name, email or exact device fingerprint is stored.'});
+    const conversions = await sb('site_analytics_conversion_events?select=*&order=events.desc&limit=50');
+    return res.status(200).json({ok:true,summary,top,conversions,privacy:'No IP address, name, email or exact device fingerprint is stored.'});
   }catch(e){
     return res.status(500).json({ok:false,error:'analytics_unavailable'});
   }
