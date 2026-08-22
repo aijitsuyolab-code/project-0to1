@@ -2,6 +2,7 @@ name: Inject analytics tracker
 on:
   push:
     paths:
+      - '**/*.html'
       - '.github/workflows/analytics-inject.yml'
 permissions:
   contents: write
