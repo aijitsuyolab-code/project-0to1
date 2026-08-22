@@ -61,18 +61,13 @@ jobs:
                   urls.add(base + "/" + p)
 
           url_list = sorted(urls)[:10000]
-          with open("indexnow-payload.json", "w", encoding="utf-8") as f:
-              json.dump({
-                  "host": host,
-                  "key": "89735cc2594845fd12c203b7894618b4",
-                  "keyLocation": base + "/89735cc2594845fd12c203b7894618b4.txt",
-                  "urlList": url_list,
-              }, f, ensure_ascii=False)
+          with open("indexnow-candidates.json", "w", encoding="utf-8") as f:
+              json.dump(url_list, f, ensure_ascii=False)
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
-              f.write(f"count={len(url_list)}\n")
+              f.write(f"candidate_count={len(url_list)}\n")
 
-          print("IndexNow URLs:", len(url_list))
+          print("IndexNow candidate URLs:", len(url_list))
           for u in url_list:
               print(u)
           PY
@@ -80,8 +75,74 @@ jobs:
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.sha }}
           EVENT_NAME: ${{ github.event_name }}
+
+      - name: Wait for production and build payload
+        id: live
+        if: steps.urls.outputs.candidate_count != '0'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import concurrent.futures, json, os, time, urllib.error, urllib.request
+
+          host = "project-0to1.vercel.app"
+          base = f"https://{host}"
+          key = "89735cc2594845fd12c203b7894618b4"
+          key_url = base + "/" + key + ".txt"
+
+          with open("indexnow-candidates.json", encoding="utf-8") as f:
+              candidates = json.load(f)
+
+          def status(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "PROJECT-0to1-IndexNow/1.0"})
+              try:
+                  with urllib.request.urlopen(req, timeout=12) as r:
+                      return r.status
+              except urllib.error.HTTPError as e:
+                  return e.code
+              except Exception:
+                  return 0
+
+          # GitHub Actions and Vercel deploy concurrently. Wait until the key
+          # and changed URLs are actually live so crawlers never receive a 404.
+          pending = set(candidates)
+          live = set()
+          for attempt in range(18):
+              key_ok = status(key_url) == 200
+              if key_ok and pending:
+                  with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
+                      results = dict(zip(pending, pool.map(status, pending)))
+                  for url, code in results.items():
+                      if 200 <= code < 400:
+                          live.add(url)
+                  pending -= live
+
+              print(f"preflight attempt={attempt + 1} key_ok={key_ok} live={len(live)} pending={len(pending)}")
+              if key_ok and not pending:
+                  break
+              time.sleep(10)
+
+          if pending:
+              print("Skipping URLs not live after preflight:")
+              for u in sorted(pending):
+                  print(u)
+
+          url_list = sorted(live)
+          with open("indexnow-payload.json", "w", encoding="utf-8") as f:
+              json.dump({
+                  "host": host,
+                  "key": key,
+                  "keyLocation": key_url,
+                  "urlList": url_list,
+              }, f, ensure_ascii=False)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"count={len(url_list)}\n")
+
+          print("IndexNow live URLs:", len(url_list))
+          PY
+
       - name: Notify IndexNow
-        if: steps.urls.outputs.count != '0'
+        if: steps.live.outputs.count != '0'
         run: |
           curl --fail-with-body --retry 2 \
             -H 'Content-Type: application/json; charset=utf-8' \
