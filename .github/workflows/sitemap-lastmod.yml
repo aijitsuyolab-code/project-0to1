@@ -1,0 +1,88 @@
+name: Refresh sitemap lastmod
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: github.actor != 'project-0to1-bot'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Update lastmod for changed HTML
+        id: update
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, subprocess, xml.etree.ElementTree as ET
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          sitemap = 'sitemap.xml'
+          before = os.environ.get('BEFORE', '')
+          after = os.environ.get('AFTER', 'HEAD')
+
+          try:
+              if before and set(before) != {'0'}:
+                  out = subprocess.check_output(['git','diff','--name-only',before,after], text=True)
+              else:
+                  out = subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'], text=True)
+          except Exception:
+              out = ''
+
+          changed = {p.strip() for p in out.splitlines() if p.strip().endswith('.html') and '/' not in p.strip()}
+          if not changed:
+              print('No root HTML changes; sitemap unchanged.')
+              with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:
+                  f.write('changed=0\n')
+              raise SystemExit(0)
+
+          date = datetime.now(ZoneInfo('Asia/Tokyo')).date().isoformat()
+          ns_uri = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+          ET.register_namespace('', ns_uri)
+          tree = ET.parse(sitemap)
+          root = tree.getroot()
+          touched = 0
+
+          targets = {'https://project-0to1.vercel.app/' if p == 'index.html' else f'https://project-0to1.vercel.app/{p}' for p in changed}
+
+          for url in root.findall(f'{{{ns_uri}}}url'):
+              loc = url.find(f'{{{ns_uri}}}loc')
+              if loc is None or not loc.text or loc.text.strip() not in targets:
+                  continue
+              lastmod = url.find(f'{{{ns_uri}}}lastmod')
+              if lastmod is None:
+                  lastmod = ET.SubElement(url, f'{{{ns_uri}}}lastmod')
+              if lastmod.text != date:
+                  lastmod.text = date
+                  touched += 1
+
+          if touched:
+              tree.write(sitemap, encoding='utf-8', xml_declaration=True)
+
+          with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:
+              f.write(f'changed={touched}\n')
+          print(f'Updated {touched} sitemap entries to {date}.')
+          PY
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+
+      - name: Commit sitemap refresh
+        if: steps.update.outputs.changed != '0'
+        run: |
+          git config user.name 'project-0to1-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m 'SEO: refresh sitemap lastmod for changed pages'
+          git push
