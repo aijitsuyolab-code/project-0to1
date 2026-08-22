@@ -1,0 +1,65 @@
+name: IndexNow notify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Collect changed public URLs
+        id: urls
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          host = "project-0to1.vercel.app"
+          base = f"https://{host}"
+          before = os.environ.get("BEFORE", "")
+          after = os.environ.get("AFTER", "HEAD")
+          try:
+              if before and set(before) != {"0"}:
+                  out = subprocess.check_output(["git","diff","--name-only",before,after], text=True)
+              else:
+                  out = subprocess.check_output(["git","diff","--name-only","HEAD^","HEAD"], text=True)
+          except Exception:
+              out = ""
+          paths = []
+          for p in out.splitlines():
+              if p == "index.html":
+                  paths.append("/")
+              elif p.endswith(".html") and "/" not in p:
+                  paths.append("/" + p)
+              elif p in {"sitemap.xml","robots.txt","llms.txt"}:
+                  paths.append("/" + p)
+          urls = sorted(set(base + p for p in paths))[:10000]
+          with open("indexnow-payload.json","w",encoding="utf-8") as f:
+              json.dump({
+                  "host": host,
+                  "key": "89735cc2594845fd12c203b7894618b4",
+                  "keyLocation": base + "/89735cc2594845fd12c203b7894618b4.txt",
+                  "urlList": urls,
+              }, f, ensure_ascii=False)
+          with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:
+              f.write(f"count={len(urls)}\n")
+          print("IndexNow URLs:", len(urls))
+          for u in urls: print(u)
+          PY
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+      - name: Notify IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          curl --fail-with-body --retry 2 \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @indexnow-payload.json \
+            https://api.indexnow.org/IndexNow
