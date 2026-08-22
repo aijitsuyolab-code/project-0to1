@@ -9,6 +9,7 @@
 - Small business AI automation guide: https://project-0to1.vercel.app/small-business-ai-automation-guide.html
 - AI subsidy 2026 hub: https://project-0to1.vercel.app/ai-subsidy-2026-hub.html
 - AI subsidy 2026 guide: https://project-0to1.vercel.app/ai-subsidy-2026-guide.html
+- AI subsidy 2026 frame comparison: https://project-0to1.vercel.app/ai-subsidy-2026-frame-comparison.html
 - gBizID and AI subsidy deadline guide: https://project-0to1.vercel.app/gbizid-ai-subsidy-deadline-2026.html
 - AI subsidy August 25 deadline checklist: https://project-0to1.vercel.app/ai-subsidy-deadline-checklist-2026.html
 - AI subsidy next deadline guide: https://project-0to1.vercel.app/ai-subsidy-next-deadline-2026.html
@@ -32,8 +33,9 @@
 - 無料会社健康診断: AI認知、検索、信頼、集客、デジタル対応などを簡易スコア化し、弱点を整理します。
 - 事業改善支援: 無料診断後にSEO/GEO、AI・業務自動化、GLOBAL 0→1、収益導線のうち必要な改善だけを切り分けます。
 - 中小企業AI導入ガイド: 中小企業・個人事業者がAI導入で失敗しにくいよう、導入順、任せやすい定型業務、人が承認を残す領域、無料診断への次導線を整理します。
-- AI導入補助金2026総合案内: 制度全体、GビズID等の事前準備、8月25日17時締切前の最終確認を目的別の3ページへ案内する検索ハブです。
+- AI導入補助金2026総合案内: 制度全体、GビズID等の事前準備、8月25日17時締切前の最終確認を目的別のページへ案内する検索ハブです。
 - AI導入補助金2026ガイド: デジタル化・AI導入補助金2026を中心に、対象者、対象経費、登録ITツール、契約・発注時期、締切確認などを一次情報ベースで整理します。
+- AI補助金2026枠比較: 通常枠、インボイス枠（インボイス対応類型）、セキュリティ対策推進枠を、業務目的、対象経費、ハードウェア、登録ITツールの観点から比較し、どの枠を最初に確認すべきかを整理します。
 - GビズID・補助金締切ガイド: GビズIDプライムの必須要件、公式の発行目安、SECURITY ACTION、8月25日17時の4次締切直前に確認すべき順番を整理します。
 - AI補助金8月25日最終チェック: 4次締切前にGビズID、SECURITY ACTION、登録ITツール、IT導入支援事業者、締切当日のアクセス集中リスクを5分で確認できる実務チェックページです。
 - AI補助金次回締切ガイド: 2026年8月22日時点で5次・6次締切日が公式未公表であることを明記し、8月25日に間に合わない事業者向けに次回公募へ備える準備順を整理します。
