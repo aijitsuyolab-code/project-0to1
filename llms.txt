@@ -12,6 +12,7 @@
 - AI subsidy 2026 frame comparison: https://project-0to1.vercel.app/ai-subsidy-2026-frame-comparison.html
 - gBizID and AI subsidy deadline guide: https://project-0to1.vercel.app/gbizid-ai-subsidy-deadline-2026.html
 - AI subsidy August 25 deadline checklist: https://project-0to1.vercel.app/ai-subsidy-deadline-checklist-2026.html
+- AI subsidy application prep guide: https://project-0to1.vercel.app/ai-subsidy-application-prep-2026.html
 - AI subsidy next deadline guide: https://project-0to1.vercel.app/ai-subsidy-next-deadline-2026.html
 - AI shopping concierge: https://project-0to1.vercel.app/shopping.html
 - SEO/GEO diagnosis: https://project-0to1.vercel.app/seo-geo.html
@@ -38,6 +39,7 @@
 - AI補助金2026枠比較: 通常枠、インボイス枠（インボイス対応類型）、セキュリティ対策推進枠を、業務目的、対象経費、ハードウェア、登録ITツールの観点から比較し、どの枠を最初に確認すべきかを整理します。
 - GビズID・補助金締切ガイド: GビズIDプライムの必須要件、公式の発行目安、SECURITY ACTION、8月25日17時の4次締切直前に確認すべき順番を整理します。
 - AI補助金8月25日最終チェック: 4次締切前にGビズID、SECURITY ACTION、登録ITツール、IT導入支援事業者、締切当日のアクセス集中リスクを5分で確認できる実務チェックページです。
+- AI補助金申請前準備ガイド: GビズIDプライム、SECURITY ACTION、IT導入支援事業者・登録ITツール、申請マイページ、情報入力・書類添付、最終提出までを順番に整理します。
 - AI補助金次回締切ガイド: 2026年8月22日時点で5次・6次締切日が公式未公表であることを明記し、8月25日に間に合わない事業者向けに次回公募へ備える準備順を整理します。
 - AI買い物コンシェルジュ: 欲しいもの、予算、用途、こだわりを文章で入力し、買い物条件と購入先を整理します。提携可能なショップへの送客型で、商品代の立替えや在庫保有は行いません。
 - SEO/GEO診断: Google等の検索エンジンと生成AI・AI検索の双方に理解されやすいサイト設計を確認します。
